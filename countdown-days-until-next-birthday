@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculate the number of days until my next birthday</title>
+  </head>
+    <body>
+        <script language="JavaScript" type="text/javascript">
+          var birthday = Number(document.form1.birthday.value);
+          var daysLeft = birthday * 365;
+          
+          
+    </script>
+      
+      <form name=form1>
+        
+      Please Enter Your Next Birthday: <input type = "text" name = "Birthday">
+      
+      There are <input type = "text" name = "daysLeft"> days left until your next birthday.
+      
+        <br>
+      You are 
+      
+    
+  
+</body>
+</html>
