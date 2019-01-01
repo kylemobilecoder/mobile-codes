@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Current Day And Time</title>
+  </head>
+  <body>
+    <b><center><p id="todayHTML"></p>
+    <br>
+    <p id="timeHTML"></p>
+    </b></center>
+
+    <script language="javascript">
+
+      var today = new Date();
+      var day = today.getUTCDay();
+      var date = today.getUTCDate();
+      var month = today.getUTCMonth();
+      var year = today.getFullYear();
+      var daylist = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+      var monthlist = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      
+      var hour = today.getHours();
+      var min = today.getMinutes();
+      var sec = today.getSeconds();
+
+      var suffix = (hour >= 12)? " PM" : " AM";
+      hour = (hour >= 12)? hour - 12 : hour;
+
+      if (hour === "0" && suffix === " PM"){
+        if(min === "0" && sec === "0") {
+          hour = 12;
+          suffix = " Noon";
+        }
+      } 
+      else if (hour === "0" && suffix === " AM") {
+        if(min === "0" && sec === "0") {
+          hour = 12;
+          suffix = " Midnight";
+        }
+      }
+
+      var todayHTML = document.getElementById("todayHTML");
+
+      var timeHTML = document.getElementById("timeHTML");
+
+      todayHTML.innerHTML = "Today is: " + daylist[day] + "," + " " + date + "th" + " " + monthlist[month] + " " + year;
+
+      timeHTML.innerHTML = "Current time is: " + hour + suffix + " : " + min + " : " + sec;
+
+    </script>
+  </body>
+</html>
