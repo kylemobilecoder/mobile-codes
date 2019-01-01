@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Katrina Coloso.Mobile Writer/Coder/Web Developer Portfolio</title>
+  <style>
+    .red{color:red;}
+    .large{font size:200%;}
+    #green{color:green;}
+    .underlined{text-decoration:underline;}
+    #first-section{color:blue;background-color:bisque; font-family:arial;  width:200px; line-height: 1.4; position: relative; left:100px; top:100px; z-index: 2;}
+    #second-section{background-color:#819FF7;width:200px; position:relative; top: -100px; left: 100px;}
+    
+    Body {background-color:#E4D4C3; position:relative;}
+    
+    P { font size: 20 px; color: blue; background-color: tan; font-family:cursive; opacity: 0.5; position: relative;} 
+
+    </style> 
+  </head>
+  <body>
+    <h1>KC's Portfolio</h1>
+    <div id="first-section">
+      Hi! I'm KC. I'm a mobile writer, coder and web developer that calls a tropical island my home. Thanks for visiting my portfolio!
+    </div>
+    <div id="second-section">This is my body of works</div>
+  
+    <p class="large"> Check out my portfolio</p>
+    <p style="color:blue;>Learning CSS</p>
+    <h2 style="color:green; font-size: 5px;">I am a mobile writer, coder, and wordpress developer/</h2>
+    <p id="green">This is some more text.       
+                 <span class="underlined"> For inquiries, send an email at kat[dot]mobilewriter[at]gmail[dot]com.</span></p>
+  </body>
+</html>
