@@ -1,0 +1,73 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Simple Javascript Calculator - Basic Arithmetic Operations</title>
+
+    <script language="javascript" type="text/javascript">
+      function multiply(){
+        var a=Number(document.calculator.number1.value);
+        var b=Number(document.calculator.number2.value);
+        var c=a*b;
+        document.calculator.total.value=c;
+        document.getElementById("total").innerHTML= c;
+      }
+    </script>
+
+    <script language="javascript" type="text/javascript">
+      function addition(){
+        var a=Number(document.calculator.number1.value);
+        var b=Number(document.calculator.number2.value);
+        var c=a+b;
+        document.calculator.total.value=c;
+        document.getElementById("total").innerHTML= c;
+      }
+    </script>
+
+    <script language="javascript" type="text/javascript">
+      function subtraction(){
+        var a=Number(document.calculator.number1.value);
+        var b=Number(document.calculator.number2.value);
+        var c=a-b;
+        document.calculator.total.value=c;
+        document.getElementById("total").innerHTML= c;
+      }
+    </script>
+
+    <script language="javascript" type="text/javascript">
+      function division(){
+        var a=Number(document.calculator.number1.value);
+        var b=Number(document.calculator.number2.value);
+        var c=a/b;
+        document.calculator.total.value=c;
+        document.getElementById("total").innerHTML= c;
+      }
+    </script>
+
+    </script>
+
+  </head>
+
+  <body>
+    <form name="calculator">
+
+     Please Enter First Number: <input type="text" name="number1"> <br> 
+
+     Please Enter Second Number: <input type="text" name="number2"> <br>
+      
+      <br>Click below </br>
+
+      <input type="button" value="ADD" onclick="javascript:addition();">
+      <input type="button" value="SUB" onclick="javascript:subtraction();">
+      <input type="button" value="MUL" onclick="javascript:multiply();">
+      <input type="button" value="DIV" onclick="javascript:division();">
+     
+    <br><p>Result: <input type="text" name="total"></p></br>
+    </body>
+
+    </form>
+
+  </body>
+</html>
