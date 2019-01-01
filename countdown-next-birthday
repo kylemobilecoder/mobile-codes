@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Age In Days Calculator</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script language="javascript"></script>
+  </head>
+  <body>
+      Please enter your next birthday: <input type="date" id="birth_date"></div>
+      <br/>
+      <input type=button value= "Countdown to your next Birthday" div id="calculate">
+      <br>
+      <span id="exact_days"></span>
+
+    <script>
+      $(document).ready(function(){
+        $("#calculate").click(function(){
+          var mdate = $("#birth_date").val().toString();
+          var yearThen = parseInt(mdate.substring(0,4), 10);
+          var monthThen = parseInt(mdate.substring(5,7), 10);
+          var dayThen = parseInt(mdate.substring(8,10), 10);
+
+          var today = new Date();
+          
+          var birthday = new Date(yearThen, monthThen-1, dayThen);
+
+          var differenceInMilisecond = birthday.valueOf() - today.valueOf();
+          
+          var day_countdown = Math.floor((differenceInMilisecond / 86400000));
+
+          if ((today.getMonth() == birthday.getMonth()) && (today.getDate() == birthday.getDate())) {
+            alert("Happy Birthday!!!");
+          }
+      
+          else {
+            $("#exact_days").html("There are <span id=\"days\">" + day_countdown + " days left</span> before your next birthday.");
+          }
+        });
+      });
+    </script>
+      </div>
+</body>
+</html>
